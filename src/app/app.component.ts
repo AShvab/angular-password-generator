@@ -20,16 +20,17 @@ export class AppComponent {
   //     this.length = parsedValue;
   //   }
   // }
+
   onChangeLength(event: Event) {
     const target = event.target as HTMLInputElement;
     const value = target ? target.value : '';
-
     const parsedValue = parseInt(value);
 
     if (!isNaN(parsedValue)) {
       this.length = parsedValue;
     }
   }
+
 
   onChangeUseLetters() {
     this.includeLetters = !this.includeLetters;
