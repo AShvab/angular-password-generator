@@ -19,17 +19,7 @@ export class AppComponent {
   includeSymbols = false;
   password = '';
 
-  // onChangeLength(value: string) {
-  //   const parsedValue = parseInt(value);
-
-  //   if (!isNaN(parsedValue)) {
-  //     this.length = parsedValue;
-  //   }
-  // }
-
-  onChangeLength(event: Event) {
-    const target = event.target as HTMLInputElement;
-    const value = target ? target.value : '';
+  onChangeLength(value: string) {
     const parsedValue = parseInt(value);
 
     if (!isNaN(parsedValue)) {
@@ -37,7 +27,7 @@ export class AppComponent {
     }
   }
 
-
+ 
   onChangeUseLetters() {
     this.includeLetters = !this.includeLetters;
   }
